@@ -8,12 +8,14 @@ const CourseForm = () => {
     const [data, setData] = useState({
         courseName: '',
     });
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setData ((prev) => {
             return {...prev, [name]: value}
         })
     }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // Form Validation
@@ -35,6 +37,7 @@ const CourseForm = () => {
                 console.log(err)
         })  
     }}
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -55,4 +58,5 @@ const CourseForm = () => {
         </div>
     );
 }
+
 export default CourseForm;
