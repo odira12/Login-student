@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import axios from 'axios'; // Import Axios library for making HTTP requests
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React , { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
-const addstudentForm = () => {
+const AddstudentForm = () => {
     const [data, setData] = useState({
         firstName: '',
         lastName: '',
         gender: ''
     });
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setData ((prev) => {
@@ -49,6 +49,7 @@ const addstudentForm = () => {
                 console.log(err)
         })         
     }}
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -72,13 +73,10 @@ const addstudentForm = () => {
                 </div>
             </form>
             <div className="btn btn-dark">
-                <Link to="/DisplayStudents">DisplayStudents</Link>
                 <Link to="/DisplayStudents">Display All Students</Link>
             </div>
         </div>
     );
 }
 
-
-
-export default FormComponent;
+export default AddstudentForm;

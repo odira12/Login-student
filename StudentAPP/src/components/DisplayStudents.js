@@ -1,19 +1,16 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const DisplayStudents = () => {
-    const [data, setData] = useState ([])
-    useEffect(() => {
-        axios.get("http://localhost:4000/api/student/getallstudent")
-        .then(res => {setData(res.data) })
-        .then(err => console.log(err))
-    })
+        const [data, setData] = useState ([])
 
+        useEffect(() => {
+            axios.get("http://localhost:4000/api/student/getallstudent")
+            .then(res => {setData(res.data) })
+            .then(err => console.log(err))
+        })
+    
     return (
-        <div>
-        <div className="table table-hover">
         <table className="mx-auto w-25 table table-hover table-striped table-secondary">
             <thead>
                 <tr>
@@ -31,8 +28,6 @@ const DisplayStudents = () => {
                     </tr>
                 ))}
             </tbody>
-        </div>
-        </div>
         </table>
     );
 }
