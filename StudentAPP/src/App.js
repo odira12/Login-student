@@ -5,13 +5,13 @@ import AddstudentForm from './components/AddstudentForm';
 import DisplayStudents from './components/DisplayStudents';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom';
+import { BrowserRouter as  Route, Switch, BrowserRouter } from 'react-router-dom/cjs/react-router-dom';
 import DisplayCourses from './components/DisplayCourses';
-import LoginForm from './components/LoginForm';
+import LoginForm from './components/loginForm';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <Navbar/>
         <div className="content">
@@ -19,8 +19,8 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
-          <Route path="/StudentForm">
-            <StudentForm/>
+          <Route path="/AddstudentForm">
+            <AddstudentForm/>
           </Route>
           <Route path="/DisplayStudents">
             <DisplayStudents/>
@@ -40,7 +40,7 @@ function App() {
         </Switch>
         </div>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -14,16 +14,16 @@ const DisplayStudents = () => {
         <table className="mx-auto w-25 table table-hover table-striped table-secondary">
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>firstName</th>
+                    <th>lastName</th>
                     <th>Gender</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map((d, i) => (
                     <tr key={i}>
-                        <td>{d.firstName}</td>
-                        <td>{d.lastName}</td>
+                        <td>{d.firstname}</td>
+                        <td>{d.lastname}</td>
                         <td>{d.gender}</td>
                     </tr>
                 ))}

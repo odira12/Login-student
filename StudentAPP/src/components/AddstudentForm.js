@@ -55,11 +55,11 @@ const AddstudentForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="w-25 p-3 mx-auto">
                     <div className="form-group">
-                        <label className="mb-1">First Name</label>
+                        <label className="mb-1">FirstName</label>
                         <input type="text" className="form-control" name="firstName" value={data.firstName} onChange={handleChange}/><br/>
                     </div>
                     <div className="form-group">
-                        <label className="mb-1">Last Name</label>
+                        <label className="mb-1">LastName</label>
                         <input type="text" className="form-control" name="lastName" value={data.lastName} onChange={handleChange}/><br/>
                     </div>
                     <div className="form-group">
